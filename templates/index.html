@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NER Prediction Chatbot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <div class="chat-container">
+      <h1>NER Prediction Chatbot</h1>
+      <div class="chat-box" id="chat-box">
+        {% if sentence %}
+        <div class="chat-bubble user">{{ sentence }}</div>
+        {% endif %}
+        {% if predicted_tags %}
+        <div class="chat-bubble bot">
+          <h2>Predicted Tags</h2>
+          <ul>
+            {% for token, tag in predicted_tags %}
+            <li>
+		    <span class="token">{{ token }}</span>
+		    <span class="tag">{{ tag }}</span>
+	   </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+      <form action="/" method="POST" class="input-box" id="chat-form">
+        <input type="text" name="sentence" id="sentence" placeholder="Enter a sentence..." required>
+        <button type="submit">Send</button>
+      </form>
+      <div class="bottom-container">
+        <a href="/download_log" class="download-button" download>Download Log</a>
+      </div>
+    </div>
+  </body>
+</html>

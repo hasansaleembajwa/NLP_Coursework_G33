@@ -1,0 +1,153 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #222, #444);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #eee;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px; /* Adjust font size as desired */
+    color: #fff; /* Adjust color if needed */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+.chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.chat-bubble {
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 5px 0;
+    width: fit-content;
+    max-width: 70%;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.user {
+    background-color: #0084ff;
+    align-self: flex-end;
+    color: #fff;
+}
+
+.bot {
+    background-color: #444;
+    align-self: flex-start;
+    color: #eee;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 100%;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 15px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 10px 0 0 10px;
+    color: #eee;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    padding: 15px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.download-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.tag.B-O {
+    background-color: orange;
+  }
+  
+  .tag.B-LF {
+    background-color: rgb(51, 206, 51);
+  }
+  
+  .tag.I-LF {
+    background-color: rgb(1, 54, 1);
+  }
+  
+  .tag.I-AC {
+    background-color: #990000; /* Dark red */
+  }
+  
+  .tag {
+    background-color: #f78c00; /* Default color */
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    line-height: 1.5;
+  }
+
+
+.download-button:hover {
+    background-color: #45a049;
+}
+
+.bottom-container {
+    text-align: center;
+    margin-top: 10px;
+}
